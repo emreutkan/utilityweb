@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generator</title>
+</head>
+<body>
+<h1>QR Code Generator</h1>
+<form action="/qr" method="get">
+    <label for="text">Enter text to encode:</label>
+    <input type="text" id="text" name="text" th:value="${text}" required/>
+    <button type="submit">Generate QR Code</button>
+</form>
+
+<!-- If text is provided, display the QR code image -->
+<div th:if="${text}">
+    <h2>QR Code for: <span th:text="${text}"></span></h2>
+    <img th:src="@{'/generateQR?text=' + ${text}}" alt="QR Code"/>
+</div>
+</body>
+</html>

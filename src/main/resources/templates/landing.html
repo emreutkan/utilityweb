@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Our Service</title>
+    <!-- Link to a CSS file located in src/main/resources/static/css/style.css -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <h1>Welcome to Our Service</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{/qr}">QR Code Generator</a></li>
+            <li><a th:href="@{/shorten}">URL Shortener</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>About Our Service</h2>
+        <p>We provide a variety of tools to help you streamline your digital tasks. Whether you need to generate QR codes or shorten URLs, you’ve come to the right place.</p>
+    </section>
+    <section>
+        <h2>Get Started</h2>
+        <p>Select one of the options in the navigation menu above to begin using our services.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Your Company. All rights reserved.</p>
+</footer>
+</body>
+</html>
